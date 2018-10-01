@@ -1,0 +1,329 @@
+{
+    "help": "Search a DataStore resource.\n\n
+    
+        The datastore_search action allows you to search data in a resource.\n    
+        DataStore resources that belong to private CKAN resource can only be\n    
+        read by you if you have access to the CKAN resource and send the appropriate\n    
+        authorization.\n\n    
+        
+        :param resource_id: id or alias of the resource to be searched against\n    
+        :type resource_id: string\n    
+        :param filters: matching conditions to select, e.g {\"key1\": \"a\", \"key2\": \"b\"} (optional)\n    
+        :type filters: dictionary\n    
+        :param q: full text query (optional)\n    
+        :type q: string\n    
+        :param plain: treat as plain text query (optional, default: true)\n    
+        :type plain: bool\n    
+        :param language: language of the full text query (optional, default: english)\n    
+        :type language: string\n    
+        :param limit: maximum number of rows to return (optional, default: 100)\n    
+        :type limit: int\n    
+        :param offset: offset this number of rows (optional)\n    
+        :type offset: int\n    
+        :param fields: fields to return (optional, default: all fields in original order)\n    
+        :type fields: list or comma separated string\n    
+        :param sort: comma separated field names with ordering\n                 
+        e.g.: \"fieldname1, fieldname2 desc\"\n    
+        :type sort: string\n\n    
+        Setting the ``plain`` flag to false enables the entire PostgreSQL `full text search query language`_.\n\n    
+        
+        A listing of all available resources can be found at the alias ``_table_metadata``.\n\n    
+        
+        .. _full text search query language: http://www.postgresql.org/docs/9.1/static/datatype-textsearch.html#DATATYPE-TSQUERY\n\n    
+        If you need to download the full resource, read :ref:`dump`.\n\n    
+        
+        **Results:**\n\n    
+        
+        The result of this action is a dictionary with the following keys:\n\n    
+        
+        :rtype: A dictionary with the following keys\n    
+        :param fields: fields/columns and their extra metadata\n    
+        :type fields: list of dictionaries\n    
+        :param offset: query offset value\n    
+        :type offset: int\n    
+        :param limit: query limit value\n    
+        :type limit: int\n    
+        :param filters: query filters\n    
+        :type filters: list of dictionaries\n    
+        :param total: number of total matching records\n    
+        :type total: int\n    
+        :param records: list of matching results\n    
+        :type records: list of dictionaries\n\n    
+        
+        ",
+    "success": true,
+    "result": {
+        "resource_id": "c0f77f8b-7f22-4c0d-b133-cab642e98829",
+        "fields": [
+            {
+                "type": "int4",
+                "id": "_id"
+            },
+            {
+                "type": "text",
+                "id": "LOCAL"
+            },
+            {
+                "type": "text",
+                "id": "DATA DA IMPLANTAÇÃO"
+            },
+            {
+                "type": "numeric",
+                "id": "BOTOEIRA"
+            }
+        ],
+        "records": [
+            {
+                "DATA DA IMPLANTAÇÃO": "2000-04-03T00:00:00",
+                "_id": 1,
+                "LOCAL": " Dante Ângelo Pilla x Def. Nº385 ",
+                "BOTOEIRA": "3"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2000-06-21T00:00:00",
+                "_id": 2,
+                "LOCAL": " Av. Cavalhada x Inst. Santa Luzia ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2001-09-17T00:00:00",
+                "_id": 3,
+                "LOCAL": " Eduardo Prado x Def. Nº349 ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2005-07-30T00:00:00",
+                "_id": 4,
+                "LOCAL": "Dom Pedro II x Américo Vespúcio ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2007-12-01T00:00:00",
+                "_id": 5,
+                "LOCAL": " Praia de Belas x Pão dos Pobres",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2007-12-21T00:00:00",
+                "_id": 6,
+                "LOCAL": " Riachuelo x Borges de Medeiros ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2007-12-27T00:00:00",
+                "_id": 7,
+                "LOCAL": " Sen. Salgado Filho x Borges de Medeiros ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2008-02-14T00:00:00",
+                "_id": 8,
+                "LOCAL": " Rodoviária Municipal x def. Hotel Continental ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2008-07-01T00:00:00",
+                "_id": 9,
+                "LOCAL": " Cavalhada x Cidade de Deus ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2008-07-08T00:00:00",
+                "_id": 10,
+                "LOCAL": " Siqueira Campos x Borges de Medeiros",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2008-07-10T00:00:00",
+                "_id": 11,
+                "LOCAL": " Siqueira Campos x Uruguai ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2008-07-10T00:00:00",
+                "_id": 12,
+                "LOCAL": " Júlio de Castilhos x Terminal Parobé(Largo Visc. Cairú) ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2009-01-13T00:00:00",
+                "_id": 13,
+                "LOCAL": "Júlio de Castilhos x Dr. Flores ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2009-02-03T00:00:00",
+                "_id": 14,
+                "LOCAL": " Assis Brasil x Fernando Ferrari(Vonpar) ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2009-02-18T00:00:00",
+                "_id": 15,
+                "LOCAL": "Orfanotrófio x Ritter dos Reis ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2010-07-01T00:00:00",
+                "_id": 16,
+                "LOCAL": " Oswaldo Aranha x Paulo Gama ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2010-07-01T00:00:00",
+                "_id": 17,
+                "LOCAL": " Sarmento Leite x def. nº 320 - Fac. Eng. Mecânica ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2010-08-11T00:00:00",
+                "_id": 18,
+                "LOCAL": " Borges de Medeiros x Siqueira Campos ",
+                "BOTOEIRA": "7"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "07/09/20010",
+                "_id": 19,
+                "LOCAL": " Protásio Alves x Vicente da Fontoura ",
+                "BOTOEIRA": "7"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2010-07-10T00:00:00",
+                "_id": 20,
+                "LOCAL": "Bento Gonçalves x Marista ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-12-04T00:00:00",
+                "_id": 21,
+                "LOCAL": " Mauá x Padre Tomé ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2012-12-04T00:00:00",
+                "_id": 22,
+                "LOCAL": "Juca Batista x def. nº 1684 ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2012-12-04T00:00:00",
+                "_id": 23,
+                "LOCAL": " Francisco Trein x Hospital Conceição ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-01-12T00:00:00",
+                "_id": 24,
+                "LOCAL": "Otávio Rocha x Dr. Flores ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-01-19T00:00:00",
+                "_id": 25,
+                "LOCAL": " Ipiranga x Azenha ",
+                "BOTOEIRA": "6"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-02-22T00:00:00",
+                "_id": 26,
+                "LOCAL": " Azenha x P5 CB Est. Castelo ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-03-06T00:00:00",
+                "_id": 27,
+                "LOCAL": " Av. João Pessoa x Col. Inacio Montanha ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-04-26T00:00:00",
+                "_id": 28,
+                "LOCAL": " Av.Bento Gonçalves nº1820(Verissimo Rosa) ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-11-13T00:00:00",
+                "_id": 29,
+                "LOCAL": "Augusto de Carvalho x Otávio Francisco Caruso ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-12-18T00:00:00",
+                "_id": 30,
+                "LOCAL": "Av.Ipiranga 1090 - colegio Protasio Alves ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-12-18T00:00:00",
+                "_id": 31,
+                "LOCAL": "Av. Ipiranga - em frente a Zero Hora ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-12-20T00:00:00",
+                "_id": 32,
+                "LOCAL": "Av.Bento Gonçalves B/C x Est.Herrman ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2013-12-20T00:00:00",
+                "_id": 33,
+                "LOCAL": "Av. Bento Gonçalves C/B x Est. Hermann ",
+                "BOTOEIRA": "2"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2014-01-02T00:00:00",
+                "_id": 34,
+                "LOCAL": "Av.Borges de Medeiros x Jeronimo Coelho",
+                "BOTOEIRA": "5"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2014-01-02T00:00:00",
+                "_id": 35,
+                "LOCAL": "Rua Prof.Annes Dias x Praça Dom Feliciano ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2014-01-31T00:00:00",
+                "_id": 36,
+                "LOCAL": "Av.Cristovão Colombo x Rua Ernesto Alves em frente ao shopping Total",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2014-02-27T00:00:00",
+                "_id": 37,
+                "LOCAL": "Av. Cristóvão Colombo - em frente ao Colégio Batista ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2014-06-24T00:00:00",
+                "_id": 38,
+                "LOCAL": "Av. Aureliano Fig. Pinto, 80 - em frente ao Ministério Público ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2014-07-15T00:00:00",
+                "_id": 39,
+                "LOCAL": "Av. Wenceslau Escobar x Rua Pereira Passos ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2014-07-15T00:00:00",
+                "_id": 40,
+                "LOCAL": "Av. Wenceslau Escobar x Rua Almirante Câmera ",
+                "BOTOEIRA": "4"
+            },
+            {
+                "DATA DA IMPLANTAÇÃO": "2014-09-11T00:00:00",
+                "_id": 41,
+                "LOCAL": "Av. Nilo Peçanha x Av. Carlos Gomes ",
+                "BOTOEIRA": "4"
+            }
+        ],
+        "_links": {
+            "start": "/api/action/datastore_search?resource_id=c0f77f8b-7f22-4c0d-b133-cab642e98829",
+            "next": "/api/action/datastore_search?offset=100&resource_id=c0f77f8b-7f22-4c0d-b133-cab642e98829"
+        },
+        "total": 41
+    }
+}
